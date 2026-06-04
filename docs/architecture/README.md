@@ -23,7 +23,7 @@ Design notes for the Active Directory Security Lab: topology, naming, trust boun
 
 ```
                     [ Internet blocked / NAT off ]
-                              |
+                             |
                     +---------+---------+
                     |   Lab vSwitch     |
                     +---------+---------+
@@ -35,4 +35,12 @@ Design notes for the Active Directory Security Lab: topology, naming, trust boun
       +--------+ +------+        +---------+
 ```
 
+
+Kali Linux
+      |
+      v
+Windows Server (DC01)
+      |
+      v
+Windows 11 Client
 Customize IPs in [lab-topology.md](lab-topology.md).
