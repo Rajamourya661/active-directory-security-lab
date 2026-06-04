@@ -1,0 +1,58 @@
+{
+  "name": "AD Security Lab - Core Techniques",
+  "versions": {
+    "attack": "15",
+    "navigator": "4.9.1",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Core lab coverage: Kerberoast, AS-REP, spray, BloodHound discovery",
+  "techniques": [
+    {
+      "techniqueID": "T1558.003",
+      "comment": "Kerberoast + 4769 detection",
+      "score": 1,
+      "color": "#ff6666"
+    },
+    {
+      "techniqueID": "T1558.004",
+      "comment": "AS-REP + 4768 detection",
+      "score": 1,
+      "color": "#ff6666"
+    },
+    {
+      "techniqueID": "T1110.003",
+      "comment": "Password spray + 4625",
+      "score": 1,
+      "color": "#ff6666"
+    },
+    {
+      "techniqueID": "T1087.002",
+      "comment": "BloodHound domain accounts",
+      "score": 1,
+      "color": "#ffbf66"
+    },
+    {
+      "techniqueID": "T1069.002",
+      "comment": "BloodHound domain groups",
+      "score": 1,
+      "color": "#ffbf66"
+    },
+    {
+      "techniqueID": "T1098",
+      "comment": "ACL abuse overview",
+      "score": 1,
+      "color": "#66b3ff"
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#ff6666"],
+    "minValue": 0,
+    "maxValue": 1
+  },
+  "legendItems": [
+    { "label": "Credential access (lab)", "color": "#ff6666" },
+    { "label": "Discovery", "color": "#ffbf66" },
+    { "label": "Persistence / manipulation", "color": "#66b3ff" }
+  ]
+}

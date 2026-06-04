@@ -1,0 +1,23 @@
+title: AS-REP Roasting - Kerberos TGT Request Without Pre-Authentication
+id: ad-lab-asrep-001
+status: experimental
+description: Successful TGT request (4768) with pre-authentication type 0 may indicate AS-REP roasting against misconfigured accounts.
+references:
+  - https://attack.mitre.org/techniques/T1558/004/
+author: AD Security Lab
+date: 2026-06-05
+tags:
+  - attack.credential_access
+  - attack.t1558.004
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4768
+    PreAuthType: '0'
+    Status: '0x0'
+  condition: selection
+falsepositives:
+  - Rare legacy accounts with DontReqPreauth (should be eliminated)
+level: high

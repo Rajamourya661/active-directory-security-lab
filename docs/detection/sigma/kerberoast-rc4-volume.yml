@@ -1,0 +1,25 @@
+title: Kerberoasting - Multiple RC4 TGS Requests from Single Client
+id: ad-lab-kerberoast-001
+status: experimental
+description: Detects possible Kerberoasting when one client requests multiple RC4 service tickets. Account Name in 4769 is the service account target, not the attacker - correlate via Client Address.
+references:
+  - https://attack.mitre.org/techniques/T1558/003/
+author: AD Security Lab
+date: 2026-06-05
+tags:
+  - attack.credential_access
+  - attack.t1558.003
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    TicketEncryptionType: '0x17'
+  filter_main_machine_spn:
+    ServiceName|endswith: '$'
+  condition: selection and not 1 of filter_main_*
+falsepositives:
+  - Legacy applications using RC4 for service accounts
+  - Vulnerability scanners
+level: medium

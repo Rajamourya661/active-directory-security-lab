@@ -1,0 +1,67 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets and sensitive lab artifacts (never commit)
+*.pfx
+*.pem
+*.key
+*.kirbi
+*.ccache
+secrets/
+credentials/
+.env
+.env.*
+*.ntds
+*.dit
+*.log.old
+
+# BloodHound / SharpHound exports (may contain real domain data)
+BloodHound_*.json
+SharpHound-*.zip
+SharpHound*.zip
+**/bloodhound/**
+*_computers.json
+*_users.json
+
+# Kerberos tickets and hashes
+tickets/
+*.hash
+*.hashes
+
+# PowerShell transcripts with sensitive output
+*.transcript.txt
+
+# Script output (baselines may list SamAccountNames)
+scripts/logs/
+
+# Large binaries and ISOs
+*.iso
+*.vhdx
+*.vmdk
+*.ova
+
+# Logs and dumps
+*.evtx
+*.dmp
+*.mdmp
+logs/
+dumps/
+
+# Python / tooling caches
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if used for docs tooling)
+node_modules/
+
+# Optional: uncomment to avoid committing lab screenshots
+# screenshots/*.png
+# screenshots/*.jpg
