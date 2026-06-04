@@ -1,5 +1,8 @@
 # Active Directory Security Lab
-
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red)
+![Platform](https://img.shields.io/badge/Platform-Active%20Directory-blue)
+![Focus](https://img.shields.io/badge/Focus-Detection%20Engineering-green)
+![PowerShell](https://img.shields.io/badge/PowerShell-100%25-blue)
 Hands-on portfolio for **Active Directory** attack techniques, **detection engineering**, **hardening**, and **MITRE ATT&CK** mapping in an isolated lab.
 
 **Authorized lab use only.** See [SECURITY.md](SECURITY.md).
